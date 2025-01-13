@@ -1,3 +1,6 @@
+'use client';
+
+
 import {
   UserGroupIcon,
   HomeIcon,
@@ -17,8 +20,6 @@ const links = [
   { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
 ];
 
-
- "use client";
 export default function NavLinks() {
       const pathname = usePathname();
       return (
