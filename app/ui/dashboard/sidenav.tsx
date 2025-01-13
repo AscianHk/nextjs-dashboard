@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import NavLinks from '@/app/ui/dashboard/nav-links';
 import AcmeLogo from '@/app/ui/acme-logo';
@@ -7,18 +9,20 @@ import { usePathname } from 'next/navigation';
 
 
 
-function SideNavItem({path, title}) {
-
+function SideNavItem({ path, title }) {
   const activePath = usePathname();
-  return;(
+  return (
     <p>
-      <Link href={path}
-      className={clsx("font-bold",{
-        "bg-blue-300": activePath === path
-
-  })}
-  >{title}</Link>
-    </p>);
+      <Link 
+        href={path}
+        className={clsx("font-bold", {
+          "bg-blue-300": activePath === path,
+        })}
+      >
+        {title}
+      </Link>
+    </p>
+  );
 }
 
 
