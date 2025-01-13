@@ -7,9 +7,12 @@ import { PowerIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
+interface SideNavItemProps {
+  path: string;  
+  title: string; 
+}
 
-
-function SideNavItem({ path, title }) {
+function SideNavItem({ path, title }: SideNavItemProps) {
   const activePath = usePathname();
   return (
     <p>
